@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ICT Development - NICT UIN Jakarta</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <!-- <div class="login"> -->
+<div class="container-fluid" style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-xs-6 col-sm-2"></div>
+    <div class="col-xs-6 col-sm-8">
+      <h1>ICT Development: News Classification</h1>
+      
+      <a href="https://id.linkedin.com/in/arief-akbar-hidayat-b160a316a" target="_blank">
+        <h3>PKL 01 | Arief Akbar Hidayat </h3>
+      </a>
+      
+      <h5>Class: Entertainment, Health, Tech, Science, Business</h5>
+
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('classification')}}" method="post">
+        <!-- <input type="text" name="rate" placeholder="rate" required="required" /> -->
+        <!-- <input type="text" name="input teks" placeholder="Masukan teks (english)" required="required" /> -->
+        <!-- <textarea class="form-control"></textarea> -->
+
+        <textarea name="message" placeholder="Input Full News Text in English (to maximize results, enter full text, not just 1 or 2 paragraphs)" class="btn-block btn-large" rows="10"></textarea>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Classification</button>
+      </form>
+    </div>
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6 col-sm-2"></div>
+  </div>
+
+  {{ prediction_text }}
+
+  <!-- </div> -->
+</div>
+
+</body>
+
+</html>
