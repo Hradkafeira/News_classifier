@@ -19,7 +19,10 @@
   <div class="row">
     <div class="col-xs-6 col-sm-2"></div>
     <div class="col-xs-6 col-sm-8">
-      <h1>ICT Development: News Classification</h1>
+      <a href="https://nict.uinjkt.ac.id" target="_blank">
+      <img src="{{url_for('static', filename='nict.png')}}" style="width:90px;height:60px">
+      </a>
+      <h1 style="margin-top: 10px;">ICT Development: News Classification</h1>
       
       <a href="https://id.linkedin.com/in/arief-akbar-hidayat-b160a316a" target="_blank">
         <h3>PKL 01 | Arief Akbar Hidayat </h3>
@@ -33,7 +36,7 @@
         <!-- <input type="text" name="input teks" placeholder="Masukan teks (english)" required="required" /> -->
         <!-- <textarea class="form-control"></textarea> -->
 
-        <textarea name="message" placeholder="Input Full News Text in English (to maximize results, enter full text, not just 1 or 2 paragraphs)" class="btn-block btn-large" rows="10"></textarea>
+        <textarea name="message" placeholder="Input Full News Text in English (to maximize results, enter full text, not just 1 or 2 paragraphs)" class="btn-block btn-large" rows="10" required="harus diisi"></textarea>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Classification</button>
       </form>
